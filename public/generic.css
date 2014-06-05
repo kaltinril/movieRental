@@ -1,0 +1,10 @@
+body {background-color:#b0c4de;} 
+div.wraptext { 
+  width:100%; 
+} 
+
+p.wraptext { 
+  white-space:normal; 
+} 
+ 
+

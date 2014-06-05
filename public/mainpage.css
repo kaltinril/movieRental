@@ -1,0 +1,9 @@
+p.maintitle
+{
+  text-align:center;
+  color:rgb(200,0,0);
+  font-family:arial;
+  font-size:450%;
+  font-style:italic;
+}
+body {background-color:#b0c4de;} 

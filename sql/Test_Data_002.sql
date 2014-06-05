@@ -1,0 +1,165 @@
+/*Test Data (Inserts) – (Jeremy Swartwood CS360 April 2011)*/
+
+/*1. Insert statements for Lookup tables:*/
+
+/*tblGenre*/
+
+Insert into tblGenre values (null,'Action','Lots of movement or fighting');
+Insert into tblGenre values (null,'Adult','Raunchy or of high sexual content');
+Insert into tblGenre values (null,'Comedy','Funny, or comical.');
+Insert into tblGenre values (null,'Drama','Emotional or chick flick');
+Insert into tblGenre values (null,'Family','Movie for the whole family, kids, adults, etc');
+Insert into tblGenre values (null,'Life Story','Documentary or history of a person.');
+Insert into tblGenre values (null,'Romantic','Love story');
+Insert into tblGenre values (null,'Scary','Horror or thriller');
+Insert into tblGenre values (null,'Sci-Fi','Science Fiction, fantasy');
+Insert into tblGenre values (null,'Suspence','Riveting story that keeps you on the edge of your seat');
+
+
+/*tblMediaType*/
+
+Insert into tblMediaType values (null,'VHS', 'Virtual Home System');
+Insert into tblMediaType values (null,'VCD', 'Video Compact Disk');
+Insert into tblMediaType values (null,'DVD', 'Digital Video Disk');
+Insert into tblMediaType values (null,'BD', 'Blu-ray Disk');
+
+
+/*tblAccontRelationshipType*/
+
+Insert into tblAccountRelationshipType values (null,'Primary', 'The owner of the account.');
+Insert into tblAccountRelationshipType values (null,'Joint', 'Any other person on the account.');
+
+
+/*tblAccountPlan*/
+
+Insert into tblAccountPlan values(null, 'Individual', 'Each movie is a set cost, late fees.');
+Insert into tblAccountPlan values(null, 'Monthly - Basic', 'No per movie cost, 1 movie out at a time.'); 
+Insert into tblAccountPlan values(null, 'Monthly - Advanced', 'No per movie cost, 3 movie out at a time.');
+Insert into tblAccountPlan values(null, 'Unlimited - Fees', 'No limit on movies rented at a time, but late fees');
+Insert into tblAccountPlan values(null, 'Unlimited – no fee', 'No limit on movies rented at a time, no late fees');
+
+/*2. Insert statements for other tables*/
+
+/*tblCustomer*/
+
+Insert into tblCustomer values (null,'Woody',null,'Woodpecker','1940-05-13');
+Insert into tblCustomer values (null,'Donald','Fauntleroy','Duck','1934-06-09');
+Insert into tblCustomer values (null,'Mighty',null,'Mouse','1942-08-28');
+Insert into tblCustomer values (null,'Yogi',null,'Bear','1958-05-16');
+Insert into tblCustomer values (null,'Pink',null,'Panther','1964-01-08');
+Insert into tblCustomer values (null,'Daffy',null,'Duck','1937-04-17');
+Insert into tblCustomer values (null,'Wile','E','Coyote','1949-09-16');
+Insert into tblCustomer values (null,'Mickey',null,'Mouse','1928-11-18');
+Insert into tblCustomer values (null,'Bugs',null,'Bunny','1940-07-27');
+Insert into tblCustomer values (null, 'Scrappy','Conelius','Doo','1979-01-21');
+Insert into tblCustomer values (null, 'Jeremy','Joseph','Swartwood','1981-08-28');
+Insert into tblCustomer values (null, 'Kaltinrl',null,'Peacefoot','2006-01-01');
+Insert into tblCustomer values (null, 'Valtari',null,'Vas-Lassi','1999-12-11');
+
+
+/*tblAccount*/
+
+Insert into tblAccount values (null,1);
+Insert into tblAccount values (null,2);
+Insert into tblAccount values (null,3);
+Insert into tblAccount values (null,4);
+Insert into tblAccount values (null,5);
+Insert into tblAccount values (null,3);
+
+
+/*tblAccountCustomer*/
+
+Insert into tblAccountCustomer values (null,1,1,sysdate(),null,1);
+Insert into tblAccountCustomer values (null,1,5,sysdate(),null,2);
+Insert into tblAccountCustomer values (null,2,11,sysdate(),null,1);
+Insert into tblAccountCustomer values (null,2,13,sysdate(),null,2);
+Insert into tblAccountCustomer values (null,2,12,sysdate(),null,2);
+Insert into tblAccountCustomer values (null,3,6,sysdate(),null,1);
+Insert into tblAccountCustomer values (null,3,2,sysdate(),null,2);
+Insert into tblAccountCustomer values (null,4,8,sysdate(),null,1);
+Insert into tblAccountCustomer values (null,4,3,sysdate(),null,2);
+Insert into tblAccountCustomer values (null,5,4,sysdate(),null,1);
+Insert into tblAccountCustomer values (null,5,9,sysdate(),null,1);
+Insert into tblAccountCustomer values (null,6,7,sysdate(),null,1);
+Insert into tblAccountCustomer values (null,6,10,sysdate(),null,1);
+
+
+/*tblMovie*/
+
+Insert into tblMovie values (null,'Bewafaa',150,'2005-02-25',7, 'Anjali, living in Canada with her parents, hides her relationship to the musician Raja from her parents. When her sister dies during the birth of twins, she abandons her love, marries the widower Aditja and moves to New Delhi to become the new mother of her sisters children. Three years later, when Raja visits Delhi on his concert tour their love inflames again.');
+
+Insert into tblMovie values (null, 'Veer-Zaara',150,'2004-11-12',7,'The story of the love between Veer Pratap Singh, an Indian, and Zaara Hayaat Khan, a Pakistani...a love so great it knows no boundaries... ');
+
+Insert into tblMovie values (null, 'Mujhse Shaadi Karogi',156,'2004-01-08',3,'Sameer, fast at losing his temper is re-located to Goa where he falls in love with Rani. But Sameers new roommate Sunny, has some plans of his own.');
+
+
+Insert into tblMovie values (null, 'Kabhi Alvida Naa Kehna',192,'2006-08-11',4,' There are three kinds of married people in the world.  First, whose marriages are arranged, Ive never quite understood that, but I’m sure they know what theyre doing.  Then there are those who fall in love and marry their soul mates. These few, I believe, are the most fortunate people in the world.  And lastly, there are those couples that marry for their parents, for money or play it safe and marry a friend. These are the most unfortunate ones in the world… and they don’t even know it.  Until one day, riding the fast train of life they run into their soulmate, and are faced with the hardest question of all. What do you do when you meet the love of your life and youre married to someone else? What do you do? What do you do?');
+
+
+Insert into tblMovie values (null, 'Insan',120,'2005-01-14',1,' Amjad is a auto-rickshaw driver in Bombay, and lives with his mother in a small tenement in Bombays slums. His mother had originally given birth to another son, Munna, who has been missing for several years. She is over-joyed when Munna returns home, and both she and Amjad welcome him, and celebrate. They do not know that Munna is now known as Azhar Khan - a member of a Jihaadi terrorist group, who is now using Amjad and his mother as a cover, in order to carry out a deadly and daring terrorist attack.');
+
+
+Insert into tblMovie values (null, 'Pyaar Mein Twist',140,'2005-09-02',5,'With their respective childrens marriages about to take place, two middle-aged single parents fall in love.');
+
+
+Insert into tblMovie values (null, 'Prince',138,'2010-04-09',1,'One of the savviest thieves in the world commits the biggest heist of his life. He wakes up next morning to realize he has a gunshot wound on his arm that he doesnt remember getting. In his quest to find answers he discovers his name is Prince, he used to work for a man named Sarang and his girlfriends name is Maya. He is being hunted by the secret service of India- I Grip, the CBI and the biggest white collared criminals in the world. He is the most wanted man in the country because only he knows the whereabouts of the heist, which contains a secret that is linked not only to his loss of memory but threatens the future of the Human Race. Prince can rely only on his razor sharp instincts to salvage himself. The web of deception spins and Prince gets even more entangled. Nothing and no one can be trusted. Every day he meets a new girl claiming to be Maya... Every cop and criminal in the country is out for his blood... He doesnt remember where he has hidden the Heist... He doesnt know which side of the law he is on... His life is at stake... The future of mankind is at stake... Prince has no one but himself to trust ... Failure is not an option... He has just 5 Days of his life... Time is running out will he survive');
+
+Insert into tblMovie values (null, 'Dostana',145,'2008-11-14',3,' Kunal and Sameer, two straight guys who pretend to be a gay couple to secure an posh Miami apartment, but both of them fall for their gorgeous room-mate Neha, hilarity ensures as they strive to convince one and all they are gay! While secretly trying to win Nehas heart. ');
+Insert into tblMovie values (null, 'Jab We Met',138,'2007-10-26',7,'A depressed wealthy businessman finds his life changing after he meets a spunky and care-free young woman. ');
+
+Insert into tblMovie values (null, 'Krishna Cottage',130,'2004-05-13',8,'During the year 1990 Professor-Author Siddharth Das releases his first book Kahi Unkahi Baatein which contain a total of 10 short stories albeit with the last story Krishna Cottage without any ending. A total of fifty thousand copies are printed and distributed to five different cities in India. Three trucks carrying these copies meet with mysterious accidents, two toppling off cliffs, and one catching fire; and one ship sinks losing its entire consignment. One copy of this book is found and kept under lock and key in the store-room of J.C. College. Then in 2002 collegians Akshay, Kabir, Nupur, Pulit, Shanti, and Manav, induct new-comer, Disha, to their group, and also invite her to the engagement ceremony of Shanti and Manav. The group will soon find out that her induction will set loose a chain of events that will throw their lives in jeopardy as she may be a ferocious shape-changing entity that is out to claim her lover, Amar Khanna, from a past life, and also prevent anyone from reading the last chapter of Professor Das book.');
+
+
+Insert into tblMovie values (null, 'Rab Ne Bana Di Jodi',167,'2008-12-12',4,'A middle-aged man who lost his love for life rediscovers it by assuming a new identity in order to rekindle the romantic spark in his marriage.');
+
+
+Insert into tblMovie values (null, 'Dhoom:2',152,'2006-12-24',1,'ACP Jai Dixit and his best friend Ali takes on an international thief known only as Mr. A. Will they be able to catch him?');
+
+Insert into tblMovie values (null, 'Vaada',135,'2005-01-07',10,'A blind husband. An obsessed lover. And the missing body of a murdered wife...?');
+Insert into tblMovie values (null, 'Koi... Mil Gaya',171,'2003-08-08',9,'A developmentally disabled young man tries to continue the work his father did in communicating with extra-terrestrials from outer space, which leads to something miraculous and wonderful.');
+
+
+/*tblCopyInformation*/
+
+/*DVD*/
+Insert into tblCopyInformation values (1,'A',null,null,3);
+Insert into tblCopyInformation values (2,'A',12.99,'2010-05-08',3);
+Insert into tblCopyInformation values (3,'A',9.99,'2009-07-01',3);
+Insert into tblCopyInformation values (4,'A',7.99,'2011-04-01',3);
+Insert into tblCopyInformation values (5,'A',null,'2010-03-20',3);
+Insert into tblCopyInformation values (6,'A',5.99,'2011-02-07',3);
+Insert into tblCopyInformation values (7,'A',17.95,'2011-04-20',3);
+Insert into tblCopyInformation values (8,'A',15.65,'2010-02-14',3);
+Insert into tblCopyInformation values (9,'A',19.90,'2008-02-11',3);
+Insert into tblCopyInformation values (10,'A',13.00,'2005-07-19',3);
+Insert into tblCopyInformation values (11,'A',22.25,'2009-01-02',3);
+Insert into tblCopyInformation values (12,'A',19.95,'2007-03-01',3);
+Insert into tblCopyInformation values (13,'A',16.57,'2004-08-01',3);
+Insert into tblCopyInformation values (7,'B',17.95,'2011-04-20',3);
+Insert into tblCopyInformation values (8,'B',15.65,'2010-02-14',3);
+
+/*BD*/
+Insert into tblCopyInformation values (1,'B',19.75,'2011-04-20',4);
+Insert into tblCopyInformation values (2,'B',19.45,'2011-04-20',4);
+Insert into tblCopyInformation values (3,'B',18.85,'2011-04-20',4);
+Insert into tblCopyInformation values (7,'C',16.45,'2011-04-20',4);
+Insert into tblCopyInformation values (8,'C',13.75,'2011-04-20',4);
+Insert into tblCopyInformation values (9,'B',15.15,'2011-04-20',4);
+Insert into tblCopyInformation values (12,'B',17.75,'2011-04-20',4);
+Insert into tblCopyInformation values (14,'B',12.85,'2011-04-20',4);
+
+/*VCD*/
+Insert into tblCopyInformation values (2,'C',19.75,'2005-04-20',2);
+
+
+/*tblRentalHistory*/
+
+Insert into tblRentalHistory values(1,'A',1,'2010-01-21','2010-01-22','2010-01-22');
+Insert into tblRentalHistory values(5,'A',1,'2010-04-20','2010-04-21',null);
+Insert into tblRentalHistory values(7,'B',2,'2011-04-20','2011-04-21',null);
+Insert into tblRentalHistory values(12,'A',4,'2010-08-11','2010-09-11','2010-08-25');
+Insert into tblRentalHistory values(10,'A',3,'2009-01-31','2009-02-01','2009-02-01');
+Insert into tblRentalHistory values(9,'B',5,'2011-04-21','2011-04-22','2011-04-22');
+Insert into tblRentalHistory values(14,'B',6,'2011-04-23','2011-04-24',null);
+
+
